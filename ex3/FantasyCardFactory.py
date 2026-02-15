@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict
 from ex1.ArtifactCard import ArtifactCard
 from ex3.CardFactory import CardFactory
 from ex1.SpellCard import SpellCard
@@ -45,4 +45,3 @@ class FantasyCardFactory(CardFactory):
             "spells": ["fireball"],
             "artifacts": ["mana_ring"]
         }
-

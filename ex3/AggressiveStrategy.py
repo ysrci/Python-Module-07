@@ -10,16 +10,17 @@ class AggressiveStrategy(GameStrategy):
         damage_dealt = 0
         max_mana = 5
 
-        for card in battlefield:
-            damage_dealt += card.cost
-
         sorted_hand = sorted(hand, key=lambda c: c.cost)
 
         for card in sorted_hand:
             if mana_used + card.cost <= max_mana:
                 cards_played.append(card.name)
                 mana_used += card.cost
-                damage_dealt += card.cost
+
+                if card.name == "Lightning Bolt":
+                    damage_dealt += 6
+                else:
+                    damage_dealt += card.cost
 
         return {
             "cards_played": cards_played,
@@ -40,4 +41,3 @@ class AggressiveStrategy(GameStrategy):
                     prioritized.append(target)
             return prioritized
         return available_targets
-

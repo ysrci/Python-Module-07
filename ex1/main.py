@@ -43,7 +43,8 @@ def main():
     while True:
         try:
             card = deck.draw_card()
-            print(f"Drew: {card.name} ({card.__class__.__name__.replace('Card','')})")
+            print(f"Drew: {card.name}",
+                  f"({card.__class__.__name__.replace('Card','')})")
             print("Play result:", card.play({}), "\n")
         except ValueError:
             break

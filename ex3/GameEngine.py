@@ -37,7 +37,6 @@ class GameEngine:
             "damage_dealt": turn_result["damage_dealt"]
             }
 
-
     def get_engine_status(self) -> Dict:
         return {
                 "turns_simulated": self.turns_simulated,

@@ -28,7 +28,7 @@ def main():
 
     print("Turn execution:")
     print("Strategy:", strategy.get_strategy_name())
-    print("Actions", {
+    print("Actions:", {
         "cards_played": turn_result["cards_played"],
         "mana_used": turn_result["mana_used"],
         "targets_attacked": turn_result["targets_attacked"],
@@ -40,7 +40,7 @@ def main():
     print(engine.get_engine_status())
     print()
 
-    print("Abstract Factory + Strategy Pattern:" +
+    print("Abstract Factory + Strategy Pattern: " +
           "Maximum flexibility achieved!")
 
 

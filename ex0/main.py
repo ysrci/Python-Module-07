@@ -9,13 +9,14 @@ def main():
                                rarity="Legendary", attack=7, health=5)
 
     print("CreatureCard Info:")
-    print(fire_dragon.get_card_info())
+    info = fire_dragon.get_card_info()
+    print(info)
 
     mana = 6
 
     print(f"\nPlaying Fire Dragon with {mana} mana available:")
     print(f"Playable: {fire_dragon.is_playable(mana)}")
-    print(f"Play result: {fire_dragon.play({})}\n")
+    print(f"Play result: {fire_dragon.play(info)}\n")
 
     print("Fire Dragon attacks Goblin Warrior:")
     print(f'Attack result: {fire_dragon.attack_target("Goblin Warrior")}\n')

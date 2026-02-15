@@ -29,6 +29,7 @@ class CreatureCard(Card):
         }
 
     def get_card_info(self) -> dict:
+        """Method Extension"""
         info = super().get_card_info()
         info.update({
             "type": "Creature",
